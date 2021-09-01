@@ -15,7 +15,7 @@ $nombres_users = count_all_users();
           <div class="card text-white bg-primary o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fa fa-fw fa-comments"></i>
+                <i class="fa fa-fw fa-shopping-cart"></i>
               </div>
               <div class="mr-5"><?php echo htmlspecialchars($nombres_produit);?> Produit</div>
             </div>
@@ -32,7 +32,7 @@ $nombres_users = count_all_users();
           <div class="card text-white bg-success o-hidden h-100">
             <div class="card-body">
               <div class="card-body-icon">
-                <i class="fa fa-fw fa-shopping-cart"></i>
+                <i class="fa fa-fw fa-users"></i>
               </div>
               <div class="mr-5"><?php echo htmlspecialchars($nombres_users);?> Utilisateur</div>
             </div>
