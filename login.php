@@ -1,5 +1,5 @@
 <?php
- require_once 'controller/login_post.php';
+  include_once('controller/login_post.php');
  ?>
  <!DOCTYPE html>
  <html lang="en">
@@ -20,12 +20,15 @@
 <body class="bg-dark">
   <div class="container">
     <div class="card card-login mx-auto mt-5">
+      <div class="<?php echo $message_class;?>" role="alert">
+        <?php echo $message_erro; ?>
+      </div>
       <div class="card-header">HabbidouPanel</div>
       <div class="card-body">
         <form action="login.php" method="post">
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input class="form-control" name="_email" id="exampleInputEmail1" type="email" aria-describedby="emailHelp" placeholder="Enter email" required>
+            <input class="form-control" name="_email" id="exampleInputEmail1" type="text" aria-describedby="emailHelp" placeholder="Enter email" required>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
@@ -45,11 +48,11 @@
       </div>
     </div>
   </div>
+
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 </body>
-
 </html>
