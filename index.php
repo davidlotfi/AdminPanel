@@ -1,6 +1,5 @@
 <?php
 include_once 'include/header.php';
-require_once 'include/Connexion.php';
 
 $result = find_all_produit();
 $nombres_produit = count_all_produit();

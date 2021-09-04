@@ -1,3 +1,7 @@
+<?php
+require_once 'Connexion.php';
+
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -91,7 +95,10 @@
             </div>
           </form>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link">
+            <i class="fa fa-fw fa-user"></i>boukernineabdellatif@gmail.com</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
