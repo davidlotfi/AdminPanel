@@ -1,6 +1,6 @@
 <?php
-  include_once('controller/login_post.php');
- ?>
+include_once('controller/login_post.php');
+?>
  <!DOCTYPE html>
  <html lang="en">
  <head>
