@@ -38,7 +38,7 @@
       global $dbd;
       return $dbd->query('SELECT * FROM Utilisateur');
   }
-   function count_all_users($value=''){
+   function count_all_users(){
      $reponse = find_all_users();
      return $reponse->rowCount();
    }
