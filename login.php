@@ -19,10 +19,11 @@ include_once('controller/login_post.php');
  </head>
 <body class="bg-dark">
   <div class="container">
+    <div class="<?php echo $message_class;?>" role="alert">
+      <?php echo $message_erro; ?>
+    </div>
     <div class="card card-login mx-auto mt-5">
-      <div class="<?php echo $message_class;?>" role="alert">
-        <?php echo $message_erro; ?>
-      </div>
+
       <div class="card-header">HabbidouPanel</div>
       <div class="card-body">
         <form action="login.php" method="post">
@@ -43,7 +44,7 @@ include_once('controller/login_post.php');
           <input class="btn btn-primary btn-block" type="submit" name="commit" value="Login">
         </form>
         <div class="text-center"><br>
-          <p class="d-block small">habbidou.com</p>
+          <p class="d-block small">Copyright © Habbidou.com 2021</p>
         </div>
       </div>
     </div>

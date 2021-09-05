@@ -1,5 +1,11 @@
 <?php
 require_once 'Connexion.php';
+session_start();
+if (isset($_SESSION['pseudo'])) {
+  $user=$_SESSION['pseudo'];
+}else {
+  header('location:login.php');
+}
 
  ?>
 <!DOCTYPE html>
@@ -47,10 +53,10 @@ require_once 'Connexion.php';
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="#">Navbar</a>
+              <a href="#">Users</a>
             </li>
             <li>
-              <a href="#">Cards</a>
+              <a href="#">Products</a>
             </li>
           </ul>
         </li>
@@ -97,10 +103,12 @@ require_once 'Connexion.php';
         </li>
         <li class="nav-item">
           <a class="nav-link">
-            <i class="fa fa-fw fa-user"></i>boukernineabdellatif@gmail.com</a>
+            <i class="fa fa-fw fa-user"></i>
+             <?php echo $user; ?>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+          <a class="nav-link" href="controller/logout.php">
             <i class="fa fa-fw fa-sign-out"></i>Logout</a>
         </li>
       </ul>
