@@ -6,7 +6,6 @@ if (isset($_SESSION['pseudo'])) {
 }else {
   header('location:login.php');
 }
-
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -19,7 +18,6 @@ if (isset($_SESSION['pseudo'])) {
     <link href="css/dataTables.bootstrap4.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/sb-admin.css" rel="stylesheet">
-
     <title>Habbidou Panel</title>
     <style media="screen">
        .hh{
@@ -29,7 +27,6 @@ if (isset($_SESSION['pseudo'])) {
     </style>
   </head>
   <body class="fixed-nav sticky-footer" id="page-top">
-
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
     <a class="navbar-brand" href="index.php"><i class="fa fa-fw fa-dashboard"></i> HabbidouPanel</a>
