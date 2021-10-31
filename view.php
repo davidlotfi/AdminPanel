@@ -1,22 +1,13 @@
 <?php
  include_once 'include/header.php';
- $reponseAdmin=$dbd->prepare('SELECT id_produit,description,detail,prix,image,image2,image3,image4,telephone,date,nom_willaya FROM produit,willaya  WHERE produit.willaya=willaya.ID_willaya AND id_produit=?');
- $reponseAdmin->execute(array($_GET['IDD_Prod']));
- $donnesAdmin=$reponseAdmin->fetch();
+
+   $reponseAdmin=$dbd->prepare('SELECT id_produit,description,detail,prix,image,image2,image3,image4,telephone,date,nom_willaya FROM produit,willaya  WHERE produit.willaya=willaya.ID_willaya AND id_produit=?');
+   $reponseAdmin->execute(array($_GET['IDD_Prod']));
+   $donnesAdmin=$reponseAdmin->fetch();
+
 ?>
 <?php
-//get values of form
-//$description = $_POST['description'];
-//$prix = $_POST['prix'];
 
-//$detail = $_POST['detail'];
-// update info of product
- function update_product(){
-  global $dbd;
-  $req=$dbd->prepare('UPDATE produit SET description = :description, prix = :prix, detail = :detail WHERE id_produit = $idProd ');
-  $req->execute( array('description' => $_POST['description'] ,'prix' => $_POST['prix'] ,'detail' => $_POST['detail'] ));
-  header('location:view.php');
-}
  function delete_product($value=''){
   // code...
 }
@@ -30,11 +21,10 @@ if (isset($_POST['commitEnregister']) || isset($_POST['commitSupprimer'])){
   }
 }
 */
-
  ?>
    <div class="content-wrapper">
      <div class="container">
-      <form class="" action="view.php" method="post">
+      <form class="" action="controller/view_post.php" method="post">
         <div class="card text-center mb-3">
            <div class="card-header">
              Détails ID: <?php echo $donnesAdmin['id_produit']; ?>
@@ -72,6 +62,9 @@ if (isset($_POST['commitEnregister']) || isset($_POST['commitSupprimer'])){
                        <div class="col">
                          <input type="text" class="form-control" name="prix" placeholder="Prix en DA" value="<?php echo $donnesAdmin['prix']; ?>">
                        </div>
+                       <div class="col">
+                         <input class="form-control" type="text" name="id" value="<?php echo $donnesAdmin['id_produit']; ?>">
+                       </div>
                      </div>
                      <div class="form-group form-group-lg">
                        <div class="">
@@ -80,8 +73,8 @@ if (isset($_POST['commitEnregister']) || isset($_POST['commitSupprimer'])){
                     </div>
                 </section>
                </div>
-               <input class="btn btn-success" type="submit" name="commitEnregister" value="Enregistrer">
-               <input class="btn btn-danger" type="submit" name="commitSupprimer" value="Supprimer">
+                 <input class="btn btn-success" type="submit" name="commitEnregister" value="Enregistrer">
+                 <input class="btn btn-danger" type="submit" name="commitSupprimer" value="Supprimer">
            </div>
       </div>
    </form>
