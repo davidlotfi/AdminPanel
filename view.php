@@ -4,24 +4,7 @@
    $reponseAdmin=$dbd->prepare('SELECT id_produit,description,detail,prix,image,image2,image3,image4,telephone,date,nom_willaya FROM produit,willaya  WHERE produit.willaya=willaya.ID_willaya AND id_produit=?');
    $reponseAdmin->execute(array($_GET['IDD_Prod']));
    $donnesAdmin=$reponseAdmin->fetch();
-
 ?>
-<?php
-
- function delete_product($value=''){
-  // code...
-}
-/*
-if (isset($_POST['commitEnregister']) || isset($_POST['commitSupprimer'])){
-  if ($_POST['commitEnregister']) {
-    update_product();
-  }
-  if ($_POST['commitSupprimer']) {
-    delete_product();
-  }
-}
-*/
- ?>
    <div class="content-wrapper">
      <div class="container">
       <form class="" action="controller/view_post.php" method="post">
@@ -78,7 +61,6 @@ if (isset($_POST['commitEnregister']) || isset($_POST['commitSupprimer'])){
            </div>
       </div>
    </form>
-
      </div>
    </div>
 <?php include_once 'include/footer.php'; ?>
