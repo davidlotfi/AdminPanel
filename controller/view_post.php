@@ -1,7 +1,6 @@
 <?php
 require_once ('C:\xampp\htdocs\doudouphp\github\admin\include\Connexion.php');
 
-
 // update info of product
 $message='';
 function update_product(){
