@@ -21,12 +21,12 @@
 
     function count_all_produit(){
         $reponse = find_all_produit();
-        return $reponse->rowCount(); ;
+        return $reponse->rowCount(); 
     }
     // for list produit list< produit index
     function count_all_produit_for_list(){
         $reponse = find_all_produit_for_list();
-        return $reponse->rowCount(); ;
+        return $reponse->rowCount();
     }
 
     function find_by_sql($sql=""){
