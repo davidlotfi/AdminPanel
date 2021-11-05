@@ -11,6 +11,7 @@ include_once('controller/login_post.php');
    <meta name="author" content="">
    <title>HabbidouPanel</title>
    <!-- Bootstrap core CSS-->
+   <link rel="icon" href="images/letter-h.png">
    <link href="css/bootstrap.min.css" rel="stylesheet">
    <!-- Custom fonts for this template-->
    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
